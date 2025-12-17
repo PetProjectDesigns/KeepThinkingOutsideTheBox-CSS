@@ -1,6 +1,6 @@
 # KeepThinkingOutsideTheBox-CSS
 
-A Beginner’s Guide to HTML, Modular Web Design, and Building Life-Friendly Projects for Neurodiverse Coders
+A Beginner’s Guide to CSS, Creative Styling and Building Life-Friendly Projects for Neurodiverse Coders
 
 A repository for Coding Examples and practice problems
 
