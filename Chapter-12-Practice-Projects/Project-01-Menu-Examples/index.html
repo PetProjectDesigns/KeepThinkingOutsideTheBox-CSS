@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Navigation Menu Demo</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body id="body">
+
+    <!-- Page-wide Theme Toggle -->
+    <button id="page-theme-toggle" onclick="toggleTheme()">🌙</button>
+
+    <h1>Navigation Menu Demonstration</h1>
+
+    <p>Resize your browser window to see how some elements might change (e.g., horizontal links disappear below 768px, replaced by a simulated hamburger icon).</p>
+
+    <! ----------------- Example 1 ----------------- >
+    <h2>1. Standard Navigation Menu (Logo Left, Links Right) - Responsive</h2>
+
+    <p>This is a classic, widely-used design where the Brand/Logo is on the left, and the navigation links are pushed to the far right.</p>
+
+
+    <div id="nav-1" class="nav-container nav-responsive">
+        <nav>
+            <a href="#" class="logo">My Brand</a>
+            <button class="menu-toggle" onclick="toggleMenu('nav-1')">☰</button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <! ----------------- Example 2 ----------------- >
+    <h2>2. Items Aligned to Left (Logo & Links Left) - Responsive</h2>
+
+    <p>Both the Brand and the navigation links are grouped together on the far left of the container.</p>
+
+
+    <div id="nav-2" class="nav-container nav-responsive">
+        <nav>
+            <a href="#" class="logo">My Brand</a>
+            <button class="menu-toggle" onclick="toggleMenu('nav-2')">☰</button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <! ----------------- Example 3 ----------------- >
+    <h2>3. Items Aligned to Right (All Right) - Responsive</h2>
+
+    <p>Similar to the standard navigation, the Brand is on the left and the links are aligned to the far right, typically using space-between.</p>
+
+
+    <div id="nav-3" class="nav-container nav-responsive">
+        <nav>
+            <a href="#" class="logo">My Brand</a>
+            <button class="menu-toggle" onclick="toggleMenu('nav-3')">☰</button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <! ----------------- Example 4 ----------------- >
+    <h2>4. Centered Navigation (All Centered) - Responsive</h2>
+
+    <p>Both the Brand and the navigation links are grouped and centered horizontally within the menu container.</p>
+
+
+    <div id="nav-4" class="nav-container nav-responsive">
+        <nav>
+            <a href="#" class="logo">My Brand</a>
+            <button class="menu-toggle" onclick="toggleMenu('nav-4')">☰</button>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <! ----------------- Example 5 ----------------- >
+    <h2>5. Functional Bar (Overlay Menu, Theme Switch) - Always Visible Hamburger</h2>
+
+    <p>This is a highly functional utility bar, commonly used in mobile or app headers, featuring a Hamburger icon on the left, a centered Page Title, and a Theme Switch (Dark/Light Mode) button on the right.</p>
+
+
+    <div id="nav-5" class="nav-container">
+        <nav>
+            <button class="menu-toggle" onclick="openNav('overlay-5')">☰</button>
+            <a href="#" class="logo dashboard-title">Current Dashboard</a>
+            <button id="nav-5-theme-toggle" class="theme-toggle-btn" onclick="toggleTheme()">🌙</button>
+        </nav>
+    </div>
+
+    <!-- Full Screen Overlay Menu for Nav 5 --><div id="overlay-5" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav('overlay-5')">&times;</a>
+        <div class="overlay-content">
+            <a href="#" onclick="closeNav('overlay-5')">🏠 Home</a>
+            <a href="#" onclick="closeNav('overlay-5')">ℹ️ About Us</a>
+            <a href="#" onclick="closeNav('overlay-5')">🛠️ Services</a>
+            <a href="#" onclick="closeNav('overlay-5')">📰 Blog</a>
+            <a href="#" onclick="closeNav('overlay-5')">📞 Contact</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

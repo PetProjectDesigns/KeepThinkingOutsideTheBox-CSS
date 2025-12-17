@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD-Friendly CSS Strategies</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400&family=Roboto:wght@400&family=Inconsolata:wght@400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-bg-body: #FFFFFF;
+            --color-text: #1A1A1A;
+            --color-accent: #000000;
+            --color-border: #DDDDDD;
+            --color-code-bg: #F5F5F5;
+            --color-highlight: #EEEEEE;
+            --font-family-main: 'Merriweather','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            --font-family-code: 'Inconsolata','Consolas', 'Courier New', monospace;
+        }
+
+        body.dark-mode {
+            --color-bg-body: #121212;
+            --color-text: #E0E0E0;
+            --color-accent: #FAFAFA;
+            --color-border: #333333;
+            --color-code-bg: #222222;
+            --color-highlight: #333333;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: var(--font-family-main);
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-bg-body);
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; background: var(--color-bg-body); padding: 30px; }
+
+        header { border-bottom: 2px solid var(--color-accent); padding-bottom: 10px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
+
+        h1 { font-size: 2.2rem; color: var(--color-accent); }
+
+        .theme-toggle-btn { padding: 8px 15px; border: 1px solid var(--color-accent); background-color: transparent; color: var(--color-text); cursor: pointer; border-radius: 6px; font-weight: bold; }
+
+        h2 { font-size: 1.8rem; color: var(--color-accent); margin-top: 30px; margin-bottom: 15px; border-bottom: 2px solid var(--color-border); padding-bottom: 5px; }
+        
+        h3 { font-size: 1.4rem; color: var(--color-accent); margin-top: 25px; margin-bottom: 10px; border-left: 5px solid var(--color-accent); padding-left: 10px; }
+
+        .content-table { width: 100%; border-collapse: collapse; margin: 25px 0; border: 1px solid var(--color-border); }
+        .content-table thead tr { background-color: var(--color-accent); color: var(--color-bg-body); }
+        .content-table th, .content-table td { padding: 12px 15px; border: 1px solid var(--color-border); }
+        .content-table tbody tr:nth-of-type(even) { background-color: var(--color-code-bg); }
+
+        .interactive-section { border: 2px dashed var(--color-accent); padding: 25px; margin: 30px 0; border-radius: 8px; text-align: center; background-color: var(--color-highlight); }
+        .run-button { padding: 10px 20px; background-color: var(--color-accent); color: var(--color-bg-body); border: none; border-radius: 4px; cursor: pointer; font-weight: bold; }
+
+        #result-output { 
+            margin-top: 20px; 
+            padding: 15px; 
+            border: 1px solid var(--color-accent); 
+            background-color: var(--color-bg-body); 
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Demo Box for JS logic */
+        #demo-box {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            transition: all 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .code-block { background-color: var(--color-code-bg); border: 1px solid var(--color-border); padding: 15px; margin: 15px 0; border-radius: 6px; }
+        pre { font-family: var(--font-family-code); line-height: 1.5; }
+        .keyword { font-weight: bold; color: #d73a49; } /* Selector */
+        .property { color: #005cc5; } /* Property */
+        .string { color: #22863a; } /* Value */
+        .comment { opacity: 0.6; font-style: italic; }
+
+        .explanation-box { padding: 15px; border-left: 5px solid var(--color-accent); background-color: var(--color-highlight); margin-top: 15px; font-style: italic; }
+        footer { text-align: center; padding-top: 20px; margin-top: 40px; border-top: 1px solid var(--color-border); font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ADHD-Friendly CSS Strategies</h1>
+            <button id="theme-toggle" class="theme-toggle-btn">
+                <span class="icon">☀️</span> <span class="text">Dark Mode</span>
+            </button>
+        </header>
+
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>Learning <strong>CSS</strong> is an exciting journey, but for ADHD learners, it often comes with unique challenges, such as visual overstimulation, the "perfectionist trap" of pixel-pushing, or feeling overwhelmed by the sheer number of styling properties. Styling isn't off-limits—it just needs a strategy tailored to how your brain works best, like breaking down layouts into small, visual wins.</p>
+            <div class="explanation-box">
+                <strong>The Decorator Analogy:</strong> If HTML is the wooden frame of a house, CSS is the paint, the lighting, and the furniture that makes it a home.
+            </div>
+        </section>
+
+        <section id="example-code">
+            <h2>Organizing Your Styles</h2>
+            <p>To avoid "CSS Spaghetti," use comments as visual anchors to separate your layout styles from your typography styles.</p>
+            
+            <div class="code-block">
+                <pre>
+<span class="comment">/* --- 1. GLOBAL RESET --- */</span>
+<span class="keyword">*</span> { <span class="property">box-sizing</span>: <span class="string">border-box</span>; }
+
+<span class="comment">/* --- 2. CARD COMPONENT --- */</span>
+<span class="keyword">.profile-card</span> {
+    <span class="property">background-color</span>: <span class="string">#f9f9f9</span>;
+    <span class="property">padding</span>: <span class="string">20px</span>; <span class="comment">/* Visual breathing room */</span>
+}
+                </pre>
+            </div>
+        </section>
+
+        <section id="live-demo">
+            <h2>Visual Dopamine: Immediate Feedback</h2>
+            <p>ADHD brains crave immediate results. Use live previews or simple toggle buttons to see your CSS changes in real-time.</p>
+
+            <div class="interactive-section">
+                <button onclick="runConceptDemo()" class="run-button">
+                    Toggle Style Win
+                </button>
+                
+                <div id="result-output">
+                    <div id="demo-box">The Skeleton</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison-table">
+            <h2>The "Micro-Win" CSS Checklist</h2>
+            <p>Instead of trying to style a whole page, focus on one "stepping stone" at a time to prevent paralysis.</p>
+            
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Big Goal</th>
+                        <th>Micro-Win (The Task)</th>
+                        <th>Time Estimate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Master Layouts</strong></td>
+                        <td>Center a single element using Flexbox.</td>
+                        <td>10 mins </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Typography</strong></td>
+                        <td>Import a Google Font and set a line-height.</td>
+                        <td>15 mins</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interactivity</strong></td>
+                        <td>Create a hover state (<b>:hover</b>) for a button.</td>
+                        <td>10 mins</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="key-takeaways">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li><strong>The 25-Minute Rule:</strong> Use the Pomodoro technique to avoid falling down a "CSS rabbit hole" for hours.</li>
+                <li><strong>Visual Anchors:</strong> Use high-contrast color themes in your editor to distinguish properties from values.</li>
+                <li><strong>Box Model First:</strong> Visualize every element as a box (Padding, Border, Margin) before you start styling.</li>
+            </ul>
+        </section>
+        
+        <footer>
+            <p>Keep Thinking Outside The Box: A Beginners Guide To CSS For ADHD Brains</p>
+        </footer>
+    </div>
+    
+    <script>
+        function runConceptDemo() {
+            const box = document.getElementById('demo-box');
+            if (box.style.borderRadius === '50%') {
+                box.style.borderRadius = '0%';
+                box.style.backgroundColor = '#ccc';
+                box.style.transform = 'rotate(0deg)';
+                box.innerText = 'The Skeleton';
+            } else {
+                box.style.borderRadius = '50%';
+                box.style.backgroundColor = '#4CAF50';
+                box.style.transform = 'rotate(360deg)';
+                box.style.color = 'white';
+                box.innerText = 'Styled Win!';
+            }
+        }
+
+        // Theme Toggle Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('theme-toggle');
+            const body = document.body;
+
+            toggleButton.addEventListener('click', () => {
+                const isDark = body.classList.toggle('dark-mode');
+                toggleButton.querySelector('.icon').textContent = isDark ? '🌙' : '☀️';
+                toggleButton.querySelector('.text').textContent = isDark ? 'Light Mode' : 'Dark Mode';
+            });
+        });
+    </script>
+</body>
+</html>

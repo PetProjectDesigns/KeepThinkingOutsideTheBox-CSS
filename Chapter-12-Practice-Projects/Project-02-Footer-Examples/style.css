@@ -1,0 +1,233 @@
+/* === 1. CSS Variables and Reset === */
+:root {
+    /* Light Mode Defaults */
+    --bg-primary: #ffffff;
+    --text-primary: #1f1f1f;
+    --text-secondary: #555555;
+    --footer-bg: #f5f5f5;
+    --footer-link: #3498db;
+    --footer-link-hover: #9ad0ff;
+    --footer-border: #e0e0e0;
+    --button-bg: #3498db;
+    --button-text: #ffffff;
+}
+
+/* Dark Mode Overrides */
+body.dark-mode {
+    --bg-primary: #121212;
+    --text-primary: #e0e0e0;
+    --text-secondary: #aaaaaa;
+    --footer-bg: #1f1f1f;
+    --footer-link: #f2f0ef;
+    --footer-link-hover: #9ad0ff;
+    --footer-border: #333333;
+    --button-bg: #9ad0ff;
+    --button-text: #1f1f1f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background-color 0.4s, color 0.4s;
+}
+
+/* === 2. Header and Dark Mode Switch === */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--footer-bg);
+    border-bottom: 1px solid var(--footer-border);
+}
+
+.toggle-container {
+    position: relative;
+}
+
+#theme-toggle {
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    opacity: 0.9;
+}
+
+main {
+    padding: 40px;
+    min-height: 70vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main h2 {
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed var(--footer-border);
+}
+
+/* === 3. Footer Base Styles === */
+.footer-section {
+    margin-top: 60px;
+}
+
+.footer-container {
+    background-color: var(--footer-bg);
+    padding: 40px 20px;
+    border-top: 2px solid var(--footer-border);
+    color: var(--text-secondary);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 30px;
+}
+
+.footer-col h4 {
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.footer-col a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    transition: color 0.2s;
+}
+
+.footer-col a:hover {
+    color: var(--footer-link);
+}
+
+/* === 4. Footer Layout 1: Three Columns (Grid) === */
+#footer-3-col .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* === 5. Footer Layout 2: Four Columns (Grid) === */
+#footer-4-col .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Styling for specific elements */
+.footer-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 1.5em;
+    color: var(--text-secondary);
+}
+
+/* Newsletter Form */
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--footer-border);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border-radius: 4px;
+}
+
+.newsletter-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--footer-link);
+    color: var(--button-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.newsletter-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Copyright Bar */
+.copyright-bar {
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.8em;
+    background-color: rgba(0, 0, 0, 0.05); /* Slight overlay */
+    border-top: 1px solid var(--footer-border);
+}
+
+/* === 6. Footer Layout 3: Single Row/Meta === */
+#footer-meta .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+#footer-meta .meta-links a {
+    display: inline-block;
+    margin-left: 20px;
+    color: var(--footer-link);
+    text-decoration: none;
+}
+
+#footer-meta .meta-links a:hover {
+    color: var(--footer-link-hover);
+}
+
+#footer-meta .copyright {
+    margin: 10px 0;
+}
+
+
+/* === 7. Media Queries for Responsiveness === */
+@media (max-width: 768px) {
+    header {
+padding: 15px 20px;
+    }
+    
+    main {
+padding: 20px;
+    }
+    
+    /* Stacks columns on smaller screens */
+    #footer-3-col .footer-content,
+    #footer-4-col .footer-content {
+grid-template-columns: 1fr;
+    }
+    
+    #footer-meta .footer-content {
+flex-direction: column;
+text-align: center;
+    }
+    
+    #footer-meta .meta-links a {
+margin: 0 10px;
+    }
+}
