@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Width, Height, and Box-Sizing Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .box {
+      width: 200px;   /* Content width */
+      height: 100px;  /* Content height */
+      padding: 20px;
+      border: 5px solid #4CAF50;
+      background: #d0eaff;
+    }
+
+    .border-box {
+      box-sizing: border-box; /* Includes padding + border in width/height */
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Width, Height, and Box-Sizing Demonstration</h1>
+
+  <p>
+    Both boxes below have <strong>width: 200px</strong> and <strong>height: 100px</strong>.
+    The first box uses the default box model, so padding and border make it larger.
+    The second box uses <code>box-sizing: border-box</code>, so padding and border are included
+    inside the width and height.
+  </p>
+
+  <div class="container">
+
+    <!-- Default box model -->
+    <div>
+      <div class="label">Default (content-box)</div>
+      <div class="box">
+        Content-box model<br>
+        (Total size becomes larger)
+      </div>
+    </div>
+
+    <!-- Border-box model -->
+    <div>
+      <div class="label">box-sizing: border-box</div>
+      <div class="box border-box">
+        Border-box model<br>
+        (Total size stays 200×100)
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

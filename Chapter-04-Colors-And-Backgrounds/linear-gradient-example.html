@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Linear Gradient Example</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    .gradient {
+      background: linear-gradient(to right, #ff5733, #ffbd33); /* Orange to yellow gradient */
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    .info {
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="gradient">
+    Linear Gradient: Orange to Yellow
+  </div>
+
+  <div class="info">
+    <p>
+      The box above uses a linear gradient background that transitions smoothly from orange (#ff5733)
+      to yellow (#ffbd33). This is done using the <code>linear-gradient</code> function in CSS.
+    </p>
+  </div>
+
+</body>
+</html>

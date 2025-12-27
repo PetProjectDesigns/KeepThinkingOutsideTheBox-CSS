@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Font Property Grid Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cell {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      background: #f9f9f9;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    /* Individual font property examples */
+    .font-family {
+      font-family: "Georgia", serif;
+    }
+
+    .font-size {
+      font-size: 24px;
+    }
+
+    .font-weight {
+      font-weight: bold;
+    }
+
+    .font-style {
+      font-style: italic;
+    }
+
+    .color {
+      color: darkred;
+    }
+
+    .letter-spacing {
+      letter-spacing: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Font Property Comparison Grid</h1>
+  <p>Each box shows the same sentence, but with a different CSS font property applied.</p>
+
+  <div class="grid">
+
+    <div class="cell font-family">
+      <div class="label">font-family</div>
+      The quick brown fox jumps over the lazy dog.
+    </div>
+
+    <div class="cell font-size">
+      <div class="label">font-size</div>
+      The quick brown fox jumps over the lazy dog.
+    </div>
+
+    <div class="cell font-weight">
+      <div class="label">font-weight</div>
+      The quick brown fox jumps over the lazy dog.
+    </div>
+
+    <div class="cell font-style">
+      <div class="label">font-style</div>
+      The quick brown fox jumps over the lazy dog.
+    </div>
+
+    <div class="cell color">
+      <div class="label">color</div>
+      The quick brown fox jumps over the lazy dog.
+    </div>
+
+    <div class="cell letter-spacing">
+      <div class="label">letter-spacing</div>
+      The quick brown fox jumps over the lazy dog.
+    </div>
+
+  </div>
+
+</body>
+</html>

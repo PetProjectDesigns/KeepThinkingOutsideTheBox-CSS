@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Background Image Example</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    /* Your background class */
+    .background {
+      background-image: url('image.png');
+
+      /* Cover the entire element */
+      background-size: cover;
+
+      /* Center the image */
+      background-position: center;
+
+      /* Controls if the image is repeated */
+      background-repeat: no-repeat;
+
+      width: 100%;
+      height: 250px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .info {
+      margin-top: 20px;
+      max-width: 600px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Background Image Demo</h1>
+
+  <div class="background"></div>
+
+  <div class="info">
+    <p>
+      The box above uses a background image applied through the <code>.background</code> class.
+      The image is centered, scaled to cover the entire area, and does not repeat.
+      Replace <code>image.jpg</code> with any image file in your project folder.
+    </p>
+  </div>
+
+</body>
+</html>

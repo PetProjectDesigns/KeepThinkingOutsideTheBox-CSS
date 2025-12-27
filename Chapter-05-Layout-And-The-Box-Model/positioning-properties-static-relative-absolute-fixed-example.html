@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Positioning Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+      height: 2000px; /* Extra height to show fixed positioning */
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* STATIC (default) */
+    .static-box {
+      background: #d0eaff;
+      padding: 15px;
+      border: 2px solid #0077cc;
+      position: static; /* default */
+    }
+
+    /* RELATIVE */
+    .relative-box {
+      background: #ffd9b3;
+      padding: 15px;
+      border: 2px solid #ff8800;
+      position: relative;
+      top: 10px;   /* moves down */
+      left: 20px;  /* moves right */
+    }
+
+    /* ABSOLUTE */
+    .absolute-container {
+      position: relative; /* anchor for absolute child */
+      background: #e8ffe8;
+      padding: 40px;
+      border: 2px solid #33aa33;
+      height: 150px;
+    }
+
+    .absolute-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #b3ffb3;
+      padding: 10px;
+      border: 2px solid #228822;
+    }
+
+    /* FIXED */
+    .fixed-box {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ffb3b3;
+      padding: 15px;
+      border: 2px solid #cc4444;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Positioning Demonstration</h1>
+
+  <!-- STATIC -->
+  <div class="section">
+    <div class="label">position: static (default)</div>
+    <div class="static-box">
+      This box is static. It stays in the normal document flow.
+    </div>
+  </div>
+
+  <!-- RELATIVE -->
+  <div class="section">
+    <div class="label">position: relative</div>
+    <div class="relative-box">
+      This box is relative. It moves 10px down and 20px right from its normal position.
+    </div>
+  </div>
+
+  <!-- ABSOLUTE -->
+  <div class="section">
+    <div class="label">position: absolute</div>
+    <div class="absolute-container">
+      This is the container (position: relative).
+      <div class="absolute-box">
+        Absolutely positioned box
+      </div>
+    </div>
+    <p>The absolute box is positioned relative to the green container.</p>
+  </div>
+
+  <!-- FIXED -->
+  <div class="section">
+    <div class="label">position: fixed</div>
+    <p>Scroll the page to see the fixed box stay in place.</p>
+  </div>
+
+  <div class="fixed-box">
+    Fixed Box (sticks to bottom-right)
+  </div>
+
+</body>
+</html>

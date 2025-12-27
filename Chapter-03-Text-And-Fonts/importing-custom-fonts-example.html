@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @font-face {
+      font-family: "MyCustomFont";
+      src: url("font.woff2") format("woff2"),
+           url("font.woff") format("woff");
+    }
+
+    body {
+      font-family: "MyCustomFont", sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Custom Font Demo</h1>
+
+  <p>
+    This text is using the custom font defined with <code>@font-face</code>.
+    If the custom font fails to load, the browser will fall back to a sans‑serif font.
+  </p>
+
+</body>
+</html>

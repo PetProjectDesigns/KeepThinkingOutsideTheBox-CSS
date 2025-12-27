@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .content-area {
+      background: #d0eaff;
+      padding: 10px;
+    }
+
+    .padding-area {
+      background: rgba(255, 223, 128, 0.5);
+      padding: 20px;
+    }
+
+    .border-area {
+      background: rgba(144, 238, 144, 0.4);
+      border: 5px solid #4CAF50;
+      padding: 20px;
+    }
+
+    .margin-area {
+      background: rgba(255, 182, 193, 0.4);
+      margin: 30px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Box Model Demonstration</h1>
+
+  <div class="margin-area">
+    Margin Area
+    <div class="border-area">
+      Border Area
+      <div class="padding-area">
+        Padding Area
+        <div class="content-area">
+          Content Area (text goes here)
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

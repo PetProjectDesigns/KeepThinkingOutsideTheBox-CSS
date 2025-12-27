@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Display Property Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Block example */
+    .block-example div {
+      display: block;
+      background: #d0eaff;
+      padding: 10px;
+      margin-bottom: 5px;
+      border: 1px solid #0077cc;
+    }
+
+    /* Inline example */
+    .inline-example span {
+      display: inline;
+      background: #ffd9b3;
+      padding: 5px;
+      border: 1px solid #ff8800;
+    }
+
+    /* None example */
+    .none-example .hidden {
+      display: none;
+    }
+
+    .none-example div {
+      background: #d4ffd4;
+      padding: 10px;
+      border: 1px solid #33aa33;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Display Property Demonstration</h1>
+
+  <!-- BLOCK -->
+  <div class="section block-example">
+    <div class="label">display: block</div>
+    <div>Block element 1</div>
+    <div>Block element 2</div>
+    <div>Block element 3</div>
+    <p>Block elements take up the full width and stack vertically.</p>
+  </div>
+
+  <!-- INLINE -->
+  <div class="section inline-example">
+    <div class="label">display: inline</div>
+    <p>
+      <span>Inline 1</span>
+      <span>Inline 2</span>
+      <span>Inline 3</span>
+    </p>
+    <p>Inline elements sit next to each other and only take up as much width as needed.</p>
+  </div>
+
+  <!-- NONE -->
+  <div class="section none-example">
+    <div class="label">display: none</div>
+
+    <div>Visible element</div>
+    <div class="hidden">This element is hidden (display: none)</div>
+    <div>Another visible element</div>
+
+    <p>The hidden element does not take up any space in the layout.</p>
+  </div>
+
+</body>
+</html>

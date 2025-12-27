@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Opacity and Transparency Example</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .box {
+      width: 300px;
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* 1. Full element transparency */
+    .transparent-box {
+      background: #ff5733;
+      opacity: 0.5; /* 50% transparency */
+    }
+
+    /* 2. Only background is transparent */
+    .transparent-background {
+      background-color: rgba(0, 0, 0, 0.5); /* Black with 50% transparency */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Opacity vs Transparent Background</h1>
+  <p>This page shows the difference between making an entire element transparent and making only its background transparent.</p>
+
+  <div class="container">
+
+    <div class="box transparent-box">
+      <p>opacity: 0.5</p>
+      <p>(Everything fades — text included)</p>
+    </div>
+
+    <div class="box transparent-background">
+      <p>rgba(0, 0, 0, 0.5)</p>
+      <p>(Only the background fades — text stays solid)</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

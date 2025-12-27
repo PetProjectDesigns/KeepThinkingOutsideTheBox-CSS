@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Float and Clear Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Float Left */
+    .float-left {
+      float: left;
+      width: 150px;
+      background: #d0eaff;
+      padding: 10px;
+      border: 2px solid #0077cc;
+      margin-right: 10px;
+    }
+
+    /* Float Right */
+    .float-right {
+      float: right;
+      width: 150px;
+      background: #ffd9b3;
+      padding: 10px;
+      border: 2px solid #ff8800;
+      margin-left: 10px;
+    }
+
+    /* Clear */
+    .clear {
+      clear: both;
+      background: #e8ffe8;
+      padding: 10px;
+      border: 2px solid #33aa33;
+      margin-top: 20px;
+    }
+
+    .text-block {
+      background: white;
+      padding: 10px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Float and Clear Demonstration</h1>
+
+  <!-- FLOAT LEFT -->
+  <div class="section">
+    <div class="label">float: left</div>
+
+    <div class="float-left">Floating Left</div>
+
+    <div class="text-block">
+      This text wraps around the box that is floated to the left. Floats allow elements
+      to move to the left side of their container while other content flows around them.
+    </div>
+
+    <div class="clear">This element uses clear: both to move below the float.</div>
+  </div>
+
+  <!-- FLOAT RIGHT -->
+  <div class="section">
+    <div class="label">float: right</div>
+
+    <div class="float-right">Floating Right</div>
+
+    <div class="text-block">
+      This text wraps around the box that is floated to the right. Floats are often used
+      for images or small layout elements that should sit to one side.
+    </div>
+
+    <div class="clear">This element clears the float and appears below it.</div>
+  </div>
+
+</body>
+</html>

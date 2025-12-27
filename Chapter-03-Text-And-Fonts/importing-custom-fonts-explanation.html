@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Using Custom Fonts with @font-face</title>
+
+  <style>
+    body {
+      background: #333;
+      font-family: Arial, sans-serif;
+      color: #f0f0f0;
+      line-height: 1.6;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    code {
+      background: #444;
+      padding: 2px 4px;
+      border-radius: 4px;
+    }
+
+    pre {
+      background: #444;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>How to Use a Custom Font with @font-face</h1>
+
+  <p>
+    Let's start with the tempated example:
+  </p>
+
+  <pre><code>@font-face {
+  font-family: "MyCustomFont";
+  src: url("font.woff2") format("woff2"),
+       url("font.woff") format("woff");
+}
+
+body {
+  font-family: "MyCustomFont", sans-serif;
+}</code></pre>
+
+  <hr>
+
+  <p>
+    To use a custom font with <code>@font-face</code>, you only need to update a few parts of the code:
+  </p>
+
+  <h2>1. Change the <code>font-family</code> name</h2>
+  <p>
+    This is your internal nickname for the font. It doesn’t need to match the real font’s name.  
+    Example:  
+    <code>font-family: "CoolTitleFont";</code>
+  </p>
+
+  <hr>
+
+  <h2>2. Change the file names to match your actual font files</h2>
+  <p>
+    If your font files are named <code>MyFont-Regular.woff2</code> and <code>MyFont-Regular.woff</code>, your <code>src</code> should match exactly:
+  </p>
+
+  <pre><code>@font-face {
+  font-family: "CoolTitleFont";
+  src: url("MyFont-Regular.woff2") format("woff2"),
+       url("MyFont-Regular.woff") format("woff");
+}</code></pre>
+
+  <hr>
+
+  <h2>3. Make sure the file paths are correct</h2>
+  <p>
+    If your fonts are inside a <code>fonts/</code> folder, update the paths:
+  </p>
+
+  <pre><code>src: url("fonts/MyFont-Regular.woff2") format("woff2"),
+     url("fonts/MyFont-Regular.woff") format("woff");</code></pre>
+
+  <hr>
+
+  <h2>Putting It All Together</h2>
+
+  <pre><code>@font-face {
+  font-family: "FriendlySans";
+  src: url("FriendlySans-Regular.woff2") format("woff2"),
+       url("FriendlySans-Regular.woff") format("woff");
+}
+
+body {
+  font-family: "FriendlySans", sans-serif;
+}</code></pre>
+
+  <p>
+    Now your webpage will use <strong>FriendlySans</strong> everywhere.  
+    Think of it like labeling a jar:
+  </p>
+
+  <ul>
+    <li><strong>font-family</strong> = the label you put on the jar</li>
+    <li><strong>src</strong> = the actual font files inside the jar</li>
+    <li><strong>CSS usage</strong> = “Hey browser, use the stuff in the jar called FriendlySans”</li>
+  </ul>
+
+</body>
+</html>

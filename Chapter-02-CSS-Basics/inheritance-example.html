@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif; /* Inherited by all children */
+      color: darkblue;               /* Inherited by all children */
+    }
+
+    div {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    span {
+      font-weight: bold; /* Overrides inherited styles */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Inheritance Demo</h1>
+
+  <div>
+    <p>This paragraph inherits the font and color from the body.</p>
+    <p>Even this <span>bold text</span> inherits the color, but changes its weight.</p>
+  </div>
+
+</body>
+</html>
