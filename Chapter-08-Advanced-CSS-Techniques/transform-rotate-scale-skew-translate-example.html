@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Transform Demo</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f0f4f8;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .box {
+      width: 120px;
+      height: 50px;
+      background-color: #4a90e2;
+      border-radius: 6px;
+      margin: 20px 0;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+
+    /* ROTATE */
+    .rotate:hover {
+      transform: rotate(45deg);
+    }
+
+    /* SCALE */
+    .scale:hover {
+      transform: scale(1.5);
+    }
+
+    /* SKEW */
+    .skew:hover {
+      transform: skew(20deg, 10deg);
+    }
+
+    /* TRANSLATE */
+    .translate:hover {
+      transform: translate(50px, 100px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Transform Demo</h1>
+
+  <div class="demo-section">
+    <h2>1. Rotate</h2>
+    <p>Hover to rotate the box by 45 degrees:</p>
+    <div class="box rotate">Rotate</div>
+  </div>
+
+  <div class="demo-section">
+    <h2>2. Scale</h2>
+    <p>Hover to scale the box to 150% of its size:</p>
+    <div class="box scale">Scale</div>
+  </div>
+
+  <div class="demo-section">
+    <h2>3. Skew</h2>
+    <p>Hover to skew the box along the X and Y axes:</p>
+    <div class="box skew">Skew</div>
+  </div>
+
+  <div class="demo-section">
+    <h2>4. Translate</h2>
+    <p>Hover to move the box 50px right and 100px down:</p>
+    <div class="box translate">Translate</div>
+  </div>
+
+</body>
+</html>

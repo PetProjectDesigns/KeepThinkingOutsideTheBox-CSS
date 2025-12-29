@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Transitions Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f0f4f8;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: blue;
+      color: white;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+
+      /* Smooth transition for background color */
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .button:hover {
+      background-color: green;
+    }
+
+    /* Timing function examples */
+    .timing-box {
+      width: 100px;
+      height: 40px;
+      background-color: #4a90e2;
+      margin: 10px 0;
+      border-radius: 6px;
+      transition: transform 1s;
+    }
+
+    .timing-box:hover {
+      transform: translateX(200px);
+    }
+
+    .ease { transition-timing-function: ease; }
+    .linear { transition-timing-function: linear; }
+    .ease-in { transition-timing-function: ease-in; }
+    .ease-out { transition-timing-function: ease-out; }
+    .ease-in-out { transition-timing-function: ease-in-out; }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Transitions Demo</h1>
+
+  <div class="demo-section">
+    <h2>Basic Transition Example</h2>
+    <p>Hover over the button to see a smooth color change:</p>
+    <div class="button">Hover Me</div>
+  </div>
+
+  <div class="demo-section">
+    <h2>Transition Timing Functions</h2>
+    <p>Hover over each bar to see how the timing function affects movement:</p>
+
+    <p><strong>ease</strong> (slow → fast → slow)</p>
+    <div class="timing-box ease"></div>
+
+    <p><strong>linear</strong> (constant speed)</p>
+    <div class="timing-box linear"></div>
+
+    <p><strong>ease-in</strong> (slow start)</p>
+    <div class="timing-box ease-in"></div>
+
+    <p><strong>ease-out</strong> (slow end)</p>
+    <div class="timing-box ease-out"></div>
+
+    <p><strong>ease-in-out</strong> (slow start + slow end)</p>
+    <div class="timing-box ease-in-out"></div>
+  </div>
+
+</body>
+</html>

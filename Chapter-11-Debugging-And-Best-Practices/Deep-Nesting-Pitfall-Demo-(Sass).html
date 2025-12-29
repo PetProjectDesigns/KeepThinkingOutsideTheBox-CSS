@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sass Nesting Pitfall</title>
+
+<style>
+/* Overly nested Sass (compiled) */
+.nav .menu .item .link {
+  color: red;
+}
+
+/* Clean Sass (compiled) */
+.nav-item {
+  color: green;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Sass Nesting Pitfall</h1>
+
+<p class="nav menu item link">Overly nested selector (hard to maintain)</p>
+
+<p class="nav-item">Clean, shallow selector</p>
+
+</body>
+</html>

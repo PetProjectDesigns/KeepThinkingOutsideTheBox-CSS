@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Grid Properties Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f0f4f8;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-rows: 100px auto;
+      gap: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .grid-item {
+      background-color: lightblue;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .span-columns {
+      grid-column: span 2;
+    }
+    .span-rows {
+      grid-row: span 2;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Grid Properties Demo</h1>
+  <div class="grid-container">
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item span-columns">Item 2 (spans 2 columns)</div>
+    <div class="grid-item">Item 3</div>
+    <div class="grid-item span-rows">Item 4 (spans 2 rows)</div>
+    <div class="grid-item">Item 5</div>
+    <div class="grid-item">Item 6</div>
+  </div>
+</body>
+</html>

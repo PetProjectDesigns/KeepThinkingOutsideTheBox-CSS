@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevTools Debugging Practice</title>
+
+<style>
+  body {
+    font-family: sans-serif;
+    background: #fafafa;
+  }
+
+  /* Wrong color (should be blue) */
+  .titlee { 
+    color: red; /* typo in selector prevents this from applying */
+  }
+
+  /* Unexpected margin */
+  .mystery-box {
+    background: lightgray;
+    padding: 1rem;
+    margin-left: 200px; /* unexpected */
+  }
+
+  /* Overridden style */
+  .text {
+    color: green;
+  }
+  #text {
+    color: purple;
+  }
+
+  /* Hidden element */
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+
+<body>
+
+<h1 class="title">Debug Me!</h1> <!-- Should be .titlee -->
+
+<div class="mystery-box">
+  <p id="text" class="text">Why am I purple instead of green?</p>
+</div>
+
+<p class="hidden">You found the hidden message!</p>
+
+<p style="color: orange;">Why am I orange?</p>
+
+</body>
+</html>

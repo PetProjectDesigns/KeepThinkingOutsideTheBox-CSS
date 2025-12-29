@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Keyframes & Animations Demo</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f0f4f8;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .box {
+      width: 120px;
+      height: 50px;
+      background-color: #4a90e2;
+      border-radius: 6px;
+      margin: 20px 0;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+    }
+
+    /* Basic slide-in animation */
+    @keyframes slideIn {
+      from { transform: translateX(-100%); }
+      to   { transform: translateX(0); }
+    }
+
+    .slide-box {
+      animation: slideIn 1s forwards;
+    }
+
+    /* Looping animation */
+    @keyframes pulse {
+      0%   { transform: scale(1); }
+      50%  { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .loop-box {
+      animation: pulse 1s ease-in-out infinite;
+    }
+
+    /* Animation with delay */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    .delay-box {
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 1s;
+    }
+
+    /* Animation direction demo */
+    @keyframes move {
+      from { transform: translateX(0); }
+      to   { transform: translateX(200px); }
+    }
+
+    .direction-box {
+      animation: move 2s ease-in-out infinite alternate;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>CSS Keyframes & Animations Demo</h1>
+
+  <div class="demo-section">
+    <h2>1. Basic Animation (slideIn)</h2>
+    <p>This box slides in from the left using <strong>animation-name</strong>, <strong>animation-duration</strong>, and <strong>animation-fill-mode</strong>.</p>
+    <div class="box slide-box">Slide In</div>
+  </div>
+
+  <div class="demo-section">
+    <h2>2. Looping Animation</h2>
+    <p>This box grows and shrinks repeatedly using <strong>animation-iteration-count: infinite</strong>.</p>
+    <div class="box loop-box">Loop</div>
+  </div>
+
+  <div class="demo-section">
+    <h2>3. Animation Delay</h2>
+    <p>This box fades in after a 1‑second delay using <strong>animation-delay</strong>.</p>
+    <div class="box delay-box">Delay</div>
+  </div>
+
+  <div class="demo-section">
+    <h2>4. Animation Direction</h2>
+    <p>This box moves back and forth using <strong>animation-direction: alternate</strong>.</p>
+    <div class="box direction-box">Alternate</div>
+  </div>
+
+</body>
+</html>

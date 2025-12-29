@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BEM Demo</title>
+
+<style>
+  /* BEM */
+  .card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .card__title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .card--highlight {
+    border: 2px solid orange;
+  }
+
+  /* Messy version */
+  .messy {
+    background: yellow;
+    padding: 10px;
+    border: 3px dotted red;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>BEM Naming Demo</h1>
+
+<div class="card card--highlight">
+  <div class="card__title">BEM Card</div>
+  <p>Clean, modular naming.</p>
+</div>
+
+<div class="messy">
+  <h3>Messy Card</h3>
+  <p>Harder to maintain.</p>
+</div>
+
+</body>
+</html>

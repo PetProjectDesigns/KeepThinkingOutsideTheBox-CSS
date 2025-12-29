@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessibility Debugging Demo</title>
+
+<style>
+  /* Bad contrast */
+  .bad-contrast {
+    color: yellow;
+    background: white;
+  }
+
+  /* Fixed px font */
+  .fixed-font {
+    font-size: 12px;
+  }
+
+  /* No focus style */
+  .no-focus:focus {
+    outline: none;
+  }
+
+  /* Corrected */
+  .good {
+    color: #222;
+    background: #e0e0e0;
+    font-size: 1rem;
+  }
+  .good:focus {
+    outline: 3px solid blue;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Accessibility Debugging</h1>
+
+<p class="bad-contrast">Bad contrast text</p>
+<p class="fixed-font">Fixed px font size</p>
+<button class="no-focus">No focus style</button>
+
+<hr>
+
+<p class="good">Corrected accessible text</p>
+<button class="good">Accessible button</button>
+
+</body>
+</html>

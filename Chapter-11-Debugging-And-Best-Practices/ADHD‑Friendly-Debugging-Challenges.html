@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADHD Debugging Challenges</title>
+
+<style>
+  .broken-layout {
+    display: inline-block; /* Should be block */
+  }
+
+  .misaligned {
+    margin-left: 200px; /* Too big */
+  }
+
+  .color-wont-change {
+    color: blue !important;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Debugging Mysteries</h1>
+
+<p class="broken-layout">Mystery 1: Why is my layout broken?</p>
+
+<button class="misaligned">Mystery 2: Why am I so far right?</button>
+
+<p class="color-wont-change" style="color: red;">Mystery 3: Why won't my color change?</p>
+
+<p class="hidden">Mystery 4: Why can't I see this?</p>
+
+<p style="margin-top: 100px;">Mystery 5: Why is this margin huge?</p>
+
+</body>
+</html>

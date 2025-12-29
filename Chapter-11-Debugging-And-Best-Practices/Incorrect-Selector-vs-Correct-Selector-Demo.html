@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incorrect vs Correct Selector Demo</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .demo-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* ❌ Incorrect selector (typo) */
+    .buttton {
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    /* ✅ Correct selector */
+    .button {
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .note {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .highlight {
+      padding: 0.5rem;
+      background: #ffe9e9;
+      border-left: 4px solid red;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Incorrect Selector vs Correct Selector</h1>
+
+  <div class="demo-box">
+    <h2>❌ Incorrect Selector (Styles Don’t Apply)</h2>
+    <button class="buttonn">Broken Button</button>
+
+    <div class="highlight">
+      The class name in the HTML is <strong>buttonn</strong>,  
+      but the CSS selector is <strong>.buttton</strong> — both are wrong,  
+      so no styles apply.
+    </div>
+  </div>
+
+  <div class="demo-box">
+    <h2>✅ Correct Selector (Styles Apply Correctly)</h2>
+    <button class="button">Working Button</button>
+
+    <p class="note">
+      The class name <strong>.button</strong> matches the CSS selector exactly,  
+      so the styles apply correctly.
+    </p>
+  </div>
+
+</body>
+</html>

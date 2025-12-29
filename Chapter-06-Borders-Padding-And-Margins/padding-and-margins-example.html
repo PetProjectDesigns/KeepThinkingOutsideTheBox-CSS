@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Padding and Margin Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Example 1: Basic padding and margin */
+    .box-basic {
+      padding: 10px;   /* space inside */
+      margin: 15px;    /* space outside */
+      background: white;
+      border: 2px solid black;
+    }
+
+    /* Example 2: Shorthand padding and margin */
+    .box-shorthand {
+      padding: 10px 20px;   /* top/bottom 10px, left/right 20px */
+      margin: 15px 25px;    /* top/bottom 15px, left/right 25px */
+      background: white;
+      border: 2px solid #0077cc;
+    }
+
+    /* Example 3: Four-value shorthand */
+    .box-four-values {
+      padding: 10px 15px 20px 25px;  /* top, right, bottom, left */
+      margin: 5px 10px 15px 20px;    /* top, right, bottom, left */
+      background: white;
+      border: 2px solid #ff8800;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Padding and Margin Demonstration</h1>
+  <p>This page shows how padding and margin affect spacing inside and around elements.</p>
+
+  <!-- BASIC -->
+  <div class="section">
+    <div class="label">1. Basic Padding and Margin</div>
+    <div class="box-basic">
+      This box uses <code>padding: 10px;</code> and <code>margin: 15px;</code>.
+    </div>
+  </div>
+
+  <!-- SHORTHAND -->
+  <div class="section">
+    <div class="label">2. Shorthand Padding and Margin</div>
+    <div class="box-shorthand">
+      This box uses shorthand values like <code>padding: 10px 20px;</code> and <code>margin: 15px 25px;</code>.
+    </div>
+  </div>
+
+  <!-- FOUR-VALUE SHORTHAND -->
+  <div class="section">
+    <div class="label">3. Four-Value Shorthand (Top, Right, Bottom, Left)</div>
+    <div class="box-four-values">
+      This box uses four-value shorthand for full control over each side.
+    </div>
+  </div>
+
+</body>
+</html>

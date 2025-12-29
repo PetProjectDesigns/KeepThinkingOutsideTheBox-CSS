@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Borders, Padding, and Margins Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .container {
+      margin: 40px;
+      background: rgba(255, 182, 193, 0.4); /* Margin layer */
+      padding: 20px;
+    }
+
+    .border-box {
+      border: 4px solid black; /* Border layer */
+      background: rgba(144, 238, 144, 0.4); /* Border area */
+      padding: 20px;
+    }
+
+    .padding-box {
+      background: rgba(173, 216, 230, 0.6); /* Padding area */
+      padding: 20px;
+    }
+
+    .content {
+      background: white;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .note {
+      font-style: italic;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Borders, Padding, and Margins Demonstration</h1>
+  <p>This example shows how borders, padding, and margins create layers of spacing around content.</p>
+
+  <div class="container">
+    <div class="label">Margin Area (pink)</div>
+    <div class="border-box">
+      <div class="label">Border Area (green)</div>
+      <div class="padding-box">
+        <div class="label">Padding Area (blue)</div>
+        <div class="content">
+          <strong>Content Area (white)</strong><br>
+          This is the actual content inside the box.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="note">
+    Each layer adds spacing: <strong>margin</strong> separates elements, <strong>border</strong> frames them, and <strong>padding</strong> gives breathing room inside.
+  </p>
+
+</body>
+</html>

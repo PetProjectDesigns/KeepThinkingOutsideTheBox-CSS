@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Border Radius Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Rounded corners example */
+    .box {
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 20px;
+      background: white;
+      width: 250px;
+      margin-bottom: 20px;
+    }
+
+    /* Circular element example */
+    .circle {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Border Radius Demonstration</h1>
+  <p>This page shows how to create rounded corners and circular shapes using the <code>border-radius</code> property.</p>
+
+  <div class="section">
+    <div class="label">1. Rounded Corners</div>
+    <div class="box">
+      This box uses <code>border-radius: 10px;</code> to create smooth, rounded corners.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">2. Circular Element</div>
+    <p>A circle is created by setting <code>border-radius: 50%;</code> on a square element.</p>
+    <div class="circle"></div>
+  </div>
+
+</body>
+</html>

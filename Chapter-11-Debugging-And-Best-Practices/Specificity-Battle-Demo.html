@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Specificity Battle Demo</title>
+
+<style>
+  .text {
+    color: blue;
+  }
+
+  #text {
+    color: green;
+  }
+
+  .important {
+    color: purple !important;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Specificity Battle</h1>
+
+<p class="text">Class wins (blue)</p>
+
+<p id="text" class="text">ID wins (green)</p>
+
+<p id="text" class="text" style="color: red;">Inline wins (red)</p>
+
+<p id="text" class="text important" style="color: red;">!important wins (purple)</p>
+
+</body>
+</html>

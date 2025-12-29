@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Model Demo</title>
+
+<style>
+  .box {
+    background: lightblue;
+    width: 200px;
+    transition: all 0.3s ease;
+  }
+
+  .padding { padding: 20px; }
+  .border { border: 5px solid blue; }
+  .margin { margin: 30px; }
+
+  button {
+    margin-right: 10px;
+  }
+</style>
+
+<script>
+  function toggle(cls) {
+    document.querySelector('.box').classList.toggle(cls);
+  }
+</script>
+</head>
+
+<body>
+
+<h1>Box Model Visualization</h1>
+
+<div class="box">Inspect me in DevTools!</div>
+
+<button onclick="toggle('padding')">Toggle Padding</button>
+<button onclick="toggle('border')">Toggle Border</button>
+<button onclick="toggle('margin')">Toggle Margin</button>
+
+<p>Use DevTools to see how padding, border, and margin affect layout.</p>
+
+</body>
+</html>

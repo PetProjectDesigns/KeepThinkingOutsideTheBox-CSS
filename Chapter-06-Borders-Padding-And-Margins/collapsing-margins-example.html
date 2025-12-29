@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collapsing Margins Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .box {
+      background: white;
+      padding: 15px;
+      border: 2px solid #333;
+    }
+
+    .element1 {
+      margin-bottom: 20px; /* Smaller margin */
+      background-color: lightblue;
+    }
+
+    .element2 {
+      margin-top: 30px; /* Larger margin */
+      background-color: lightcoral;
+    }
+
+    .note {
+      margin-top: 20px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Collapsing Margins Demonstration</h1>
+  <p>This example shows how the top and bottom margins of adjacent elements collapse into a single margin.</p>
+
+  <div class="box element1">
+    Element 1 (margin-bottom: 20px)
+  </div>
+
+  <div class="box element2">
+    Element 2 (margin-top: 30px)
+  </div>
+
+  <p class="note">
+    The space between the two boxes is <strong>30px</strong>, not 20px + 30px.  
+    This is because the margins collapse, and the larger margin wins.
+  </p>
+
+</body>
+</html>

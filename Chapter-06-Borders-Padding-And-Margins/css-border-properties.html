@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Border Styling Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Example 1: Individual border properties */
+    .box-individual {
+      border-width: 3px;
+      border-style: solid;
+      border-color: black;
+      padding: 15px;
+      background: white;
+      margin-bottom: 20px;
+    }
+
+    /* Example 2: Shorthand border */
+    .box-shorthand {
+      border: 4px dashed #ff5733;
+      padding: 15px;
+      background: white;
+      margin-bottom: 20px;
+    }
+
+    /* Example 3: Different styles on each side */
+    .box-mixed {
+      border-top: 4px solid blue;
+      border-right: 4px dotted green;
+      border-bottom: 4px dashed red;
+      border-left: 4px double purple;
+      padding: 15px;
+      background: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Border Styling Demonstration</h1>
+  <p>This page shows how to style borders using width, style, color, and shorthand notation.</p>
+
+  <div class="section">
+    <div class="label">1. Individual Border Properties</div>
+    <div class="box-individual">
+      This box uses <code>border-width</code>, <code>border-style</code>, and <code>border-color</code> separately.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">2. Shorthand Border Property</div>
+    <div class="box-shorthand">
+      This box uses the shorthand: <code>border: 4px dashed #ff5733;</code>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="label">3. Different Border Styles on Each Side</div>
+    <div class="box-mixed">
+      This box demonstrates unique border styles for each side (solid, dotted, dashed, double).
+    </div>
+  </div>
+
+</body>
+</html>

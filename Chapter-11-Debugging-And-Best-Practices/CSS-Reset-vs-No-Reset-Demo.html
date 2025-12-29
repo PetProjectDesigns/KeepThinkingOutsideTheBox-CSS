@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Reset vs No Reset</title>
+
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+
+<style>
+  .section {
+    width: 45%;
+    padding: 1rem;
+    background: #f0f0f0;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .no-reset h2, .no-reset p {
+    border: 1px solid red;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="section no-reset">
+  <h2>No Reset</h2>
+  <p>Browser default styles applied.</p>
+</div>
+
+<div class="section">
+  <h2>With Normalize.css</h2>
+  <p>Consistent cross-browser baseline.</p>
+</div>
+
+</body>
+</html>

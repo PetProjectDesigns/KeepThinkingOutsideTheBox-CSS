@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overlapping Elements Debugging Demo</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #eef2f7;
+      padding: 2rem;
+    }
+
+    .demo-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      position: relative;
+      height: 200px;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+    }
+
+    /* ❌ Incorrect: overlapping boxes */
+    .bad-box {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      width: 120px;
+      height: 120px;
+      background: #ff6b6b;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+    }
+
+    .bad-box2 {
+      position: absolute;
+      top: 40px; /* SAME POSITION → OVERLAP */
+      left: 40px;
+      width: 120px;
+      height: 120px;
+      background: #4d79ff;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+    }
+
+    /* ✅ Correct: adjusted positioning */
+    .good-box {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      width: 120px;
+      height: 120px;
+      background: #ff6b6b;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+    }
+
+    .good-box2 {
+      position: absolute;
+      top: 40px;
+      left: 180px; /* FIXED → NO OVERLAP */
+      width: 120px;
+      height: 120px;
+      background: #4d79ff;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="demo-box">
+    <h1>Overlapping Elements Debugging Demo</h1>
+
+    <h2>❌ Incorrect Positioning (Overlapping)</h2>
+    <div class="container">
+      <div class="bad-box">Box 1</div>
+      <div class="bad-box2">Box 2</div>
+    </div>
+
+    <h2>✅ Correct Positioning (Fixed)</h2>
+    <div class="container">
+      <div class="good-box">Box 1</div>
+      <div class="good-box2">Box 2</div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Pseudo-Elements Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f0f4f8;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Quote example */
+    .quote {
+      font-size: 1.2rem;
+      padding: 1rem;
+      background: #e8f0ff;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .quote::before {
+      content: "“";
+      font-size: 2.5rem;
+      color: gray;
+      position: absolute;
+      left: -10px;
+      top: -10px;
+    }
+
+    .quote::after {
+      content: "”";
+      font-size: 2.5rem;
+      color: gray;
+      position: absolute;
+      right: -10px;
+      bottom: -10px;
+    }
+
+    /* Label example */
+    .labeled-box {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #dff7df;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .labeled-box::before {
+      content: "START";
+      background: #4caf50;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      position: absolute;
+      top: -12px;
+      left: 10px;
+      font-size: 0.8rem;
+    }
+
+    .labeled-box::after {
+      content: "END";
+      background: #4caf50;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      position: absolute;
+      bottom: -12px;
+      right: 10px;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Pseudo-Elements Demo</h1>
+
+  <div class="demo-section">
+    <h2>::before and ::after (Quote Example)</h2>
+    <p class="quote">
+      Pseudo-elements let you insert content before or after an element without changing the HTML.
+    </p>
+  </div>
+
+  <div class="demo-section">
+    <h2>::before and ::after (Label Example)</h2>
+    <div class="labeled-box">
+      This box has labels added using pseudo-elements.
+    </div>
+  </div>
+
+</body>
+</html>

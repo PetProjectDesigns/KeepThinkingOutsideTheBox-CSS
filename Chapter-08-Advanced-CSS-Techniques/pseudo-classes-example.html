@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CSS Pseudo-Classes Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #f0f4f8;
+      padding: 2rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .demo-section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Hover example */
+    a {
+      color: blue;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:hover {
+      color: red;
+    }
+
+    /* Active example */
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #4a90e2;
+      color: white;
+      cursor: pointer;
+    }
+    button:active {
+      background-color: #003f91;
+    }
+
+    /* Focus example */
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input:focus {
+      border-color: green;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CSS Pseudo-Classes Demo</h1>
+
+  <div class="demo-section">
+    <h2>:hover Example</h2>
+    <p>Hover over this link:</p>
+    <a href="#">Hover Me</a>
+  </div>
+
+  <div class="demo-section">
+    <h2>:active Example</h2>
+    <p>Click the button to see the active state:</p>
+    <button>Click Me</button>
+  </div>
+
+  <div class="demo-section">
+    <h2>:focus Example</h2>
+    <p>Click inside the input field:</p>
+    <input type="text" placeholder="Click here to focus" />
+  </div>
+
+</body>
+</html>

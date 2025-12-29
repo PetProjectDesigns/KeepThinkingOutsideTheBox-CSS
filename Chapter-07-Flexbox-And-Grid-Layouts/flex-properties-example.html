@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Properties Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between; /* Align items along main axis */
+      align-items: flex-start;        /* Align items along cross axis */
+      gap: 20px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      flex-wrap: wrap;
+    }
+
+    .item {
+      flex-grow: 1;                  /* Allow items to grow */
+      flex-shrink: 1;                /* Allow items to shrink */
+      flex-basis: 200px;             /* Initial size before grow/shrink */
+      padding: 20px;
+      background-color: #4a90e2;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 200px) {
+      .container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .item {
+        flex-basis: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Flexbox Properties Demo</h1>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <p style="margin-top: 30px; text-align: center;">
+    Resize the browser to see how items grow, shrink, and wrap responsively.
+  </p>
+
+</body>
+</html>
